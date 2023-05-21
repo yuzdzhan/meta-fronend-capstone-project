@@ -1,17 +1,22 @@
+import aboutImage from "./images/about image.png"
+import './AboutUs.css';
+
 export function AboutUs() {
-  return <section>
-    <div>
-      <h2>Little lemon</h2>
-      <div className="aboutus_city">Chicago</div>
-      <p className="aboutus_desc">Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+  return <section id="about">
+    <div className="aboutContainer">
+      <div className="row">
+        <div className="col">
+          <h1>Little Lemon</h1>
+          <h2>Chicago</h2>
+          <p>we are a family owned Mediterranean restuarant, focused on traditional recipes served with a modern twist.</p>
+        </div>
+        <div className="col">
+          <img src={aboutImage} alt="aboutImage" className="aboutImage" />
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div>
-      <img src="" />
-      <img src="" />
-    </div>
-
-  </section>;
 
 }
 

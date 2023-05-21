@@ -1,0 +1,57 @@
+#heroSection {
+  width: 100%;
+  background-color: #495E57;
+  display: flex;
+  justify-content: center;
+  height: 440px;
+}
+
+.heroContainer {
+  max-width: 844px;
+  width: 100%;
+  padding: 1.8rem 0;
+}
+
+.heroContainer .row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.heroContainer  .col {
+  flex: 1;
+}
+
+.heroContainer h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #F4CE14;
+}
+
+.heroContainer h2 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #EDEFEE;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+}
+
+.heroContainer p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #EDEFEE;
+  line-height: 1.4;
+}
+
+.heroContainer button {
+  margin-top: 5.2rem;
+}
+
+.heroContainer .col:nth-of-type(2) {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.heroContainer img {
+  z-index: 999;
+  overflow-y: visible;
+}

@@ -1,53 +1,76 @@
+import greekSalad from "./images/greek salad.png"
+import bruchetta from "./images/Bruchetta.png"
+import lemonDesert from "./images/lemon dessert.png"
+import bikeIcon from "./images/ic_sharp-pedal-bike.svg"
+import './Highlights.css';
+
 export function Highlights() {
-  return <section className="hero">
-    <header className="header">
-      <h2>Specials</h2>
-      <input type="button" value="Online Menu" />
-    </header>
-    <div className="main">
+  return <section id="weekSpecial">
+    <div className="weekSpecialContainer">
+      <div className="head">
+        <h2>This weeks specials!</h2>
+        <button className="primaryBtn">Online Menu</button>
+      </div>
+      <div className="content">
+        <div className="row">
+          <div className="col">
+            <div className="card">
+              <img src={greekSalad} alt="cardImage" className="cardImage" />
+              <div className="cardContent">
+                <div className="cardHeading">
+                  <h3 className="title">Greek Salad</h3>
+                  <p className="price">$12.99</p>
+                </div>
 
-      <a href="#">
-        <section className="dish">
-          <img src="" className="dish_image" />
-          <div className="dish_first_row">
-            <div className="dish_name">Greek salad</div>
-            <div className="dish_price">$12.99</div>
-          </div>
-          <p className="dish_description">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-          </p>
-          <span>Order a delivery</span>
-        </section>
-      </a>
+                <p className="description">The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
 
-      <a href="#">
-        <section className="dish">
-          <img src="" className="dish_image" />
-          <div className="dish_first_row">
-            <div className="dish_name">Brucheta</div>
-            <div className="dish_price">$5.99</div>
+                <div className="order">
+                  <p>Order a delivery </p>
+                  <img src={bikeIcon} alt="bikeIcon" className="bikeIcon" />
+                </div>
+              </div>
+            </div>
           </div>
-          <p className="dish_description">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-          </p>
-          <span>Order a delivery</span>
-        </section>
-      </a>
+          <div className="col">
+            <div className="card">
+              <img src={bruchetta} alt="cardImage" className="cardImage" />
+              <div className="cardContent">
+                <div className="cardHeading">
+                  <h3 className="title">Bruchetta</h3>
+                  <p className="price">$5.99</p>
+                </div>
 
-      <a href="#">
-        <section className="dish">
-          <img src="" className="dish_image" />
-          <div className="dish_first_row">
-            <div className="dish_name">Lemon desert</div>
-            <div className="dish_price">$12.99</div>
+                <p className="description">Our Bruchetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.</p>
+
+                <div className="order">
+                  <p>Order a delivery </p>
+                  <img src={bikeIcon} alt="bikeIcon" className="bikeIcon" />
+                </div>
+              </div>
+            </div>
           </div>
-          <p className="dish_description">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-          </p>
-          <span>Order a delivery</span>
-        </section>
-      </a>
+          <div className="col">
+            <div className="card">
+              <img src={lemonDesert} alt="cardImage" className="cardImage" />
+              <div className="cardContent">
+                <div className="cardHeading">
+                  <h3 className="title">Lemon Dessert</h3>
+                  <p className="price">$5.00</p>
+                </div>
+
+                <p className="description">This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.
+                </p>
+
+                <div className="order">
+                  <p>Order a delivery </p>
+                  <img src={bikeIcon} alt="bikeIcon" className="bikeIcon" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>;
+  </section>
 }
 

@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.2rem;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 16px;
+  transition: 0.2s all;
+}
+
+.nav a:hover {
+  background-color: #F4CE14;
+  border-style: inset;
+  border: 1px solid #333333;
+  color: #EDEFEE;
+}

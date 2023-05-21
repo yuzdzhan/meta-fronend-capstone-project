@@ -1,9 +1,11 @@
 import { Nav } from './Nav';
+import logo from './images/Logo.svg';
+import './Header.css';
 
 export function Header() {
   return (
-    <header>
-      <img src='' alt='logo' />
+    <header className='container header'>
+      <img src={logo} alt='logo' />
       <Nav />
     </header>
   );
