@@ -1,7 +1,7 @@
-import greekSalad from "./images/greek salad.png"
-import bruchetta from "./images/Bruchetta.png"
-import lemonDesert from "./images/lemon dessert.png"
-import bikeIcon from "./images/ic_sharp-pedal-bike.svg"
+import greekSalad from "../images/greek salad.png"
+import bruchetta from "../images/Bruchetta.png"
+import lemonDesert from "../images/lemon dessert.png"
+import bikeIcon from "../images/ic_sharp-pedal-bike.svg"
 import './Highlights.css';
 
 export function Highlights() {

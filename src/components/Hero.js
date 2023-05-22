@@ -1,4 +1,4 @@
-import heroImage from "./images/restauranfood.png"
+import heroImage from "../images/restauranfood.png"
 import './Hero.css';
 
 export function Hero() {

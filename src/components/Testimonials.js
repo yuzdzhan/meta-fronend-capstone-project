@@ -1,5 +1,5 @@
 import './Testimonials.css'
-import  personImg from './images/1684242751674.jpeg';
+import  personImg from '../images/1684242751674.jpeg';
 
 export function Testimonials() {
   return (

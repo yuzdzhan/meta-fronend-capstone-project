@@ -1,4 +1,4 @@
-import FooterLogo from "./images/Asset 9@4x.png"
+import FooterLogo from "../images/Asset 9@4x.png"
 import './Footer.css';
 
 export const Footer = () => {

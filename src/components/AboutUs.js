@@ -1,4 +1,4 @@
-import aboutImage from "./images/about image.png"
+import aboutImage from "../images/about image.png"
 import './AboutUs.css';
 
 export function AboutUs() {
