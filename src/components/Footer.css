@@ -2,19 +2,22 @@ footer {
   position: relative;
   bottom: 0;
   background-color: #495E57;
-  height: 440px;
+  min-height: 440px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-footer div {
+footer > div {
   max-width: 844px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 0 20px;
+  gap: 20px;
+  box-sizing: border-box;
 }
 
 footer img {
@@ -34,6 +37,7 @@ footer img {
   justify-content: flex-start;
   align-items: flex-start;
   row-gap: 0.8rem;
+  padding-left: 0;
 }
 
 .footerMenu li {
@@ -52,4 +56,22 @@ footer img {
   color: #F4CE14;
 }
 
+.footerNavContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 620px;
+}
 
+@media only screen and (max-width: 600px){
+  footer img{
+    align-self: flex-start;
+    margin-top:20px;
+    margin-left: 30px;
+  }
+  .footerNavContainer{
+    flex-direction: column;
+  }
+}

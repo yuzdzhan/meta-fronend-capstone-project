@@ -1,5 +1,5 @@
 #testimonials {
-  background-color: #495E57;
+  background-color: #495e57;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -17,7 +17,7 @@
 .testimonialsContainer h1 {
   font-size: 2.4rem;
   font-weight: 400;
-  color: #F4CE14;
+  color: #f4ce14;
   text-align: center;
 }
 
@@ -25,17 +25,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 1.2rem;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .testimonialsContainer .col {
-  flex: 1;
+  max-width: 190px;
 }
 
 .testimonialsContainer .card {
-    background-color: white;
-    border-radius: 16px;
-    box-shadow: 0 0 6px 0 rgba(0,0,0,.25);
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.25);
   padding: 2.2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -50,7 +51,7 @@
 }
 
 .testimonialsContainer p {
-  color: #495E57;
+  color: #495e57;
   font-weight: 400;
   font-size: 1rem;
 }
@@ -64,10 +65,8 @@
 }
 
 .testimonialsContainer img {
-      width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  display: block;
 }
-
-

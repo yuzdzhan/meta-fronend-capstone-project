@@ -12,11 +12,18 @@
 
 .aboutContainer .row {
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+  justify-content: center;
 }
 
 .aboutContainer .col {
-  flex: 1;
+  max-width: 400px;
+}
+
+.aboutContainer .col img {
+  width: 100%;
 }
 
 .aboutContainer h1 {
@@ -39,10 +46,4 @@
   color: #333333;
   line-height: 1.4;
 }
-
-.aboutContainer .col:nth-of-type(2) {
-  display: flex;
-  justify-content: flex-end;
-}
-
 
