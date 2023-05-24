@@ -1,16 +1,10 @@
 import { useState } from "react";
 import "./BookingPage.css";
 import { PrimaryButton } from "./PrimaryButton";
+import { useAvailableTimes } from "../state/ContextAvailableTimesProvider";
 
 export function BookingForm() {
-  const availableTimes = [
-    { value: "1700", label: "17:00" },
-    { value: "1800", label: "18:00" },
-    { value: "1900", label: "19:00" },
-    { value: "2000", label: "20:00" },
-    { value: "2100", label: "21:00" },
-    { value: "2200", label: "22:00" },
-  ];
+  const {state: availableTimes, dispatch}  = useAvailableTimes();
 
   const availableOccasions = [
     { value: "birthday", label: "Birthday" },
@@ -25,6 +19,9 @@ export function BookingForm() {
   });
 
   const onChange = (name, value) => {
+    if(name==='date'){
+      dispatch({type: 'UPDATE_TIMES', payload: value});
+    }
     setState({ ...state, [name]: value });
   };
 

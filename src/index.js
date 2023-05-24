@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 import { BookingPage, HomePage } from "./components";
+import { ContextAvailableTimesProvider } from "./state/ContextAvailableTimesProvider";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ContextAvailableTimesProvider>
+      <RouterProvider router={router} />
+    </ContextAvailableTimesProvider>
   </React.StrictMode>
 );
 
