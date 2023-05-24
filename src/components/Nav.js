@@ -2,38 +2,49 @@ import { useState } from "react";
 import menuIcon from "../images/menu_icon.png";
 import menuCloseIcon from "../images/x_icon.png";
 import "./Nav.css";
+import { Link } from "react-router-dom";
 
 export function Nav() {
   const [mobileVisible, setMobileVisible] = useState(false);
+
+  const showMobileMenu = (e) => {
+    e.preventDefault();
+    setMobileVisible(true);
+  }
+
+  const hideMobileMenu = (e) => {
+    e.preventDefault();
+    setMobileVisible(false);
+  }
 
   return (
     <>
       <nav className={`nav ${mobileVisible && "mobile_visible"}`}>
         <ul>
           <li>
-            <a href="#about">About</a>
+            <Link to={'/'}>About</Link>
           </li>
           <li>
-            <a href="/menu">Menu</a>
+            <Link to={'/'}>Menu</Link>
           </li>
           <li>
-            <a href="/reservation">Reservations</a>
+            <Link to={'/'}>Reservations</Link>
           </li>
           <li>
-            <a href="/order">Order Online</a>
+            <Link to={'/'}>Order Online</Link>
           </li>
           <li>
-            <a href="/login">Login</a>
+            <Link to={'/'}>Login</Link>
           </li>
         </ul>
       </nav>
       {!mobileVisible && (
-        <a onClick={() => setMobileVisible(true)} className="mobile_menu">
+        <a href="/" onClick={showMobileMenu} className="mobile_menu">
           <img src={menuIcon} alt="menu" />{" "}
         </a>
       )}
       {mobileVisible && (
-        <a onClick={() => setMobileVisible(false)} className="mobile_menu close">
+        <a href="/" onClick={hideMobileMenu} className="mobile_menu close">
           <img src={menuCloseIcon} alt="menu" />{" "}
         </a>
       )}

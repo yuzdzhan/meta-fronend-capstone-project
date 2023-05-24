@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import FooterLogo from "../images/Asset 9@4x.png";
 import "./Footer.css";
 
@@ -11,22 +12,22 @@ export const Footer = () => {
             <h3 className="footerMenuHeading ">Navigation</h3>
             <ul className="footerMenu">
               <li>
-                <a href="/">Home</a>
+                <Link to='/'>Home</Link>
               </li>
               <li>
-                <a href="#about">About</a>
+                <Link to='/'>About</Link>
               </li>
               <li>
-                <a href="/menu">Menu</a>
+                <Link to='/'>Menu</Link>
               </li>
               <li>
-                <a href="/reservation">Reservations</a>
+                <Link to='/'>Reservations</Link>
               </li>
               <li>
-                <a href="/order">Order Online</a>
+                <Link to='/'>Home</Link>
               </li>
               <li>
-                <a href="/login">Login</a>
+                <Link to='/'>Login</Link>
               </li>
             </ul>
           </nav>
@@ -35,13 +36,13 @@ export const Footer = () => {
             <h3 className="footerMenuHeading ">Contacts</h3>
             <ul className="footerMenu">
               <li>
-                <a href={"/"}>Address</a>
+                <Link to='/'>Address</Link>
               </li>
               <li>
-                <a href={"/"}>Phone Number</a>
+                <Link to='/'>Phone Number</Link>
               </li>
               <li>
-                <a href={"/"}>Email</a>
+                <Link to='/'>Email</Link>
               </li>
             </ul>
           </nav>
@@ -50,13 +51,13 @@ export const Footer = () => {
             <h3 className="footerMenuHeading ">Social Media as</h3>
             <ul className="footerMenu">
               <li>
-                <a href="facebook.com">Facebook</a>
+                <Link to='https://facebook.com' target="_blank">Facebook</Link>
               </li>
               <li>
-                <a href="instagram.com">Instagram</a>
+                <Link to='https://instagram.com' target="_blank">Instagram</Link>
               </li>
               <li>
-                <a href="whatsapp.com">Whatsapp</a>
+                <Link to='https://whatsapp.com' target="_blank">Whatsapp</Link>
               </li>
             </ul>
           </nav>

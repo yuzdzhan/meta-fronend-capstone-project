@@ -3,6 +3,7 @@ import bruchetta from "../images/Bruchetta.png";
 import lemonDesert from "../images/lemon dessert.png";
 import bikeIcon from "../images/ic_sharp-pedal-bike.svg";
 import "./Highlights.css";
+import { PrimaryButton } from "./PrimaryButton";
 
 export function Highlights() {
   return (
@@ -10,7 +11,7 @@ export function Highlights() {
       <div className="weekSpecialContainer">
         <div className="head">
           <h2>This weeks specials!</h2>
-          <button className="primaryBtn">Online Menu</button>
+          <PrimaryButton />
         </div>
         <div className="content">
           <div className="row">
