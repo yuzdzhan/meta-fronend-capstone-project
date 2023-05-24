@@ -5,7 +5,7 @@ import { Hero } from "./Hero";
 import { Highlights } from "./Highlights";
 import { Testimonials } from "./Testimonials";
 
-export function Home() {
+export function HomePage() {
   return (
     <>
       <Header />

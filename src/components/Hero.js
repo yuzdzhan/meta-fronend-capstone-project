@@ -14,7 +14,7 @@ export function Hero() {
               we are a family owned Mediterranean restuarant, focused on
               traditional recipes served with a modern twist.
             </p>
-            <PrimaryButton />
+            <PrimaryButton type='button' value="Reserve a Table"/>
           </div>
           <div className="col">
             <img src={heroImage} alt="heroImage" className="heroImage" />

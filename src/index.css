@@ -36,5 +36,9 @@ main {
   background-color: #F4CE14;
   border-radius: 1rem;
   padding: 12px 46px;
+  cursor: pointer;
+}
+.primaryBtn:hover{
+  background: #fff2af;
 }
 

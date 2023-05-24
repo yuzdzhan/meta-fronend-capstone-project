@@ -1,11 +1,14 @@
+import { BookingForm } from "./BookingForm";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 
-export function Booking() {
+export function BookingPage() {
   return (
     <>
       <Header />
-      <main>Booking</main>
+      <main>
+        <BookingForm />
+      </main>
       <Footer />
     </>
   );

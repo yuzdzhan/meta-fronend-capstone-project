@@ -4,16 +4,16 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
-import { Booking, Home } from "./components";
+import { BookingPage, HomePage } from "./components";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <HomePage />,
   },
   {
     path: "/book",
-    element: <Booking />,
+    element: <BookingPage />,
   },
 ]);
 

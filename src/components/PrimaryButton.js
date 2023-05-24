@@ -1,3 +1,3 @@
-export function PrimaryButton() {
-  return <button className="primaryBtn">Reserve a Table</button>;
+export function PrimaryButton({type, value}) {
+  return <input type={type} className="primaryBtn" value={value}/>
 }
