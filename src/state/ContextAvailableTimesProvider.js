@@ -1,39 +1,42 @@
-import { createContext, useContext, useReducer } from 'react';
+import { createContext, useContext, useReducer } from "react";
+import { fetchAPI } from '../api/api.js'
+import { formatAPIDates } from "../utils/helpers.js";
 
 const ContextAvailableTimes = createContext();
 
 const availableTimesReducer = (state, action) => {
   switch (action.type) {
+    case "INITIALIZE_TIMES": {
+      return [...action.payload];
+    }
     case "UPDATE_TIMES": {
-      console.log("UPDATE_TIMES", action)
-      return state
+      const dates = formatAPIDates(fetchAPI(action.payload));
+      return [...dates];
     }
     default: {
-      return state
+      return state;
     }
   }
-}
+};
 
-const availableTimes= [
-    { value: "1700", label: "17:00" },
-    { value: "1800", label: "18:00" },
-    { value: "1900", label: "19:00" },
-    { value: "2000", label: "20:00" },
-    { value: "2100", label: "21:00" },
-    { value: "2200", label: "22:00" },
-]
+const availableTimes = [ ];
 
 export const ContextAvailableTimesProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(availableTimesReducer, availableTimes)
+  const [state, dispatch] = useReducer(availableTimesReducer, availableTimes);
+
+  const initializeTimes = () => {
+    const dates = fetchAPI(new Date());
+    const options = formatAPIDates(dates);
+    dispatch({type: 'INITIALIZE_TIMES', payload: options});
+  };
 
   return (
-    <ContextAvailableTimes.Provider value={{ state, dispatch }}>
+    <ContextAvailableTimes.Provider value={{ state, dispatch, initializeTimes }}>
       {children}
     </ContextAvailableTimes.Provider>
-  )
-}
+  );
+};
 
 export const useAvailableTimes = () => {
-  return useContext(ContextAvailableTimes)
-}
-
+  return useContext(ContextAvailableTimes);
+};

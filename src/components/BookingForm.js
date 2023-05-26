@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./BookingPage.css";
 import { PrimaryButton } from "./PrimaryButton";
 import { useAvailableTimes } from "../state/ContextAvailableTimesProvider";
 
 export function BookingForm() {
-  const {state: availableTimes, dispatch}  = useAvailableTimes();
+  const {state: availableTimes, dispatch, initializeTimes }  = useAvailableTimes();
 
   const availableOccasions = [
     { value: "birthday", label: "Birthday" },
@@ -20,10 +20,14 @@ export function BookingForm() {
 
   const onChange = (name, value) => {
     if(name==='date'){
-      dispatch({type: 'UPDATE_TIMES', payload: value});
+      dispatch({type: 'UPDATE_TIMES', payload: new Date(value)});
     }
     setState({ ...state, [name]: value });
   };
+
+  useEffect(() => {
+    initializeTimes();
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <form className="form">
@@ -43,7 +47,7 @@ export function BookingForm() {
           value={state.time}
           onChange={(e) => onChange("time", e.target.value)}
         >
-          {availableTimes.map((time) => (
+          {!!availableTimes && availableTimes.map((time) => (
             <option key={time.value} value={time.value}>
               {time.label}
             </option>
