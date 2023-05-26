@@ -33,6 +33,13 @@
   border: 1px solid #cccccc;
 }
 
+.inputError {
+  color: #d51c1c;
+  padding-left: 15px;
+  font-size: 13px;
+  margin-top: -5px;
+}
+
 @media only screen and (max-width: 350px){
   .form {
     grid-template-columns: repeat(1, 1fr);

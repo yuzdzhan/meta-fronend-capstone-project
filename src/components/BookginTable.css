@@ -1,0 +1,35 @@
+.bookingTable {
+  width: 100%;
+  max-width: 840px;
+  padding: 0 20px;
+  margin: 30px auto;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.bookingTable * {
+  box-sizing: border-box;
+}
+
+.bookingTable td,
+.bookingTable th {
+  padding: 10px;
+  border: none;
+  text-align: center;
+}
+
+.bookingTable thead {
+  background: #F4CE14;
+}
+
+.bookingTable td {
+  text-transform: capitalize;
+}
+
+.bookingTable tbody tr{
+  background: #ececec;
+}
+
+.bookingTable tbody tr:nth-of-type(2n+1){
+  background: #f9f9f9;
+}

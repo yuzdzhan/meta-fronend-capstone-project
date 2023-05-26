@@ -6,6 +6,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 import { BookingPage, HomePage } from "./components";
 import { ContextAvailableTimesProvider } from "./state/ContextAvailableTimesProvider";
+import { ContextReservationsProvider } from "./state/ContextReservationsProvider";
 
 const router = createBrowserRouter([
   {
@@ -21,9 +22,11 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ContextAvailableTimesProvider>
-      <RouterProvider router={router} />
-    </ContextAvailableTimesProvider>
+    <ContextReservationsProvider>
+      <ContextAvailableTimesProvider>
+        <RouterProvider router={router} />
+      </ContextAvailableTimesProvider>
+    </ContextReservationsProvider>
   </React.StrictMode>
 );
 

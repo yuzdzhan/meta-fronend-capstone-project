@@ -24,14 +24,8 @@ const availableTimes = [ ];
 export const ContextAvailableTimesProvider = ({ children }) => {
   const [state, dispatch] = useReducer(availableTimesReducer, availableTimes);
 
-  const initializeTimes = () => {
-    const dates = fetchAPI(new Date());
-    const options = formatAPIDates(dates);
-    dispatch({type: 'INITIALIZE_TIMES', payload: options});
-  };
-
   return (
-    <ContextAvailableTimes.Provider value={{ state, dispatch, initializeTimes }}>
+    <ContextAvailableTimes.Provider value={[ state, dispatch]}>
       {children}
     </ContextAvailableTimes.Provider>
   );
