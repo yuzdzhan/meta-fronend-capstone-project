@@ -4,11 +4,9 @@ import { PrimaryButton } from "./PrimaryButton";
 import { useAvailableTimes } from "../state/ContextAvailableTimesProvider";
 import { fetchAPI, submitAPI } from "../api/api";
 import { formatAPIDates } from "../utils/helpers";
-import { useNavigate } from "react-router-dom";
 
 export function BookingForm() {
   const [availableTimes, dispatch] = useAvailableTimes();
-  const navigate = useNavigate();
 
   const availableOccasions = [
     { value: "birthday", label: "Birthday" },
@@ -79,7 +77,7 @@ export function BookingForm() {
         guests: 0,
         occasion: "",
       });
-      navigate("/confirmed");
+      window.location = "/confirmed";
     }
   };
 
@@ -96,6 +94,7 @@ export function BookingForm() {
         <input
           onChange={(e) => onChange("date", e.target.value)}
           value={state.date}
+          required={true}
           type="date"
           id="res-date"
         />
@@ -108,6 +107,7 @@ export function BookingForm() {
         <select
           id="res-time"
           value={state.time}
+          required={true}
           onChange={(e) => onChange("time", e.target.value)}
         >
           <option>Select</option>
@@ -127,6 +127,7 @@ export function BookingForm() {
         <input
           onChange={(e) => onChange("guests", e.target.value)}
           value={state.guests}
+          required={true}
           type="number"
           placeholder="1"
           min="1"
@@ -141,6 +142,7 @@ export function BookingForm() {
         <label htmlFor="occasion">Occasion</label>
         <select
           id="occasion"
+          required={true}
           value={state.occasion}
           onChange={(e) => onChange("occasion", e.target.value)}
         >

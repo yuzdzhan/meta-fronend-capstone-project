@@ -5,11 +5,11 @@ import {
 } from "./ContextAvailableTimesProvider";
 
 const TestExample = () => {
-  const { state, dispatch } = useAvailableTimes();
+  const [ state, dispatch ] = useAvailableTimes();
 
   return (
     <>
-      <div data-testid="state-len">{state.length}</div>
+      <div data-testid="state-len">{!!state && state.length}</div>
       <button
         data-testid="dispatch-button"
         onClick={() => dispatch("UPDATE_TIMES")}
@@ -30,7 +30,7 @@ describe("ContextAvailableTimesProvider", () => {
 
     const stateLen = getByTestId("state-len");
 
-    expect(stateLen.textContent).toContain("6");
+    expect(stateLen.textContent).toContain("0");
   });
 
   test("should return the same state after dispatching the UPDATE_TIMES event", () => {

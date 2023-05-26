@@ -1,10 +1,8 @@
-import { useNavigate } from "react-router-dom";
 import heroImage from "../images/restauranfood.png";
 import "./Hero.css";
 import { PrimaryButton } from "./PrimaryButton";
 
 export function Hero() {
-  const navigate = useNavigate();
   return (
     <section id="heroSection">
       <div className="heroContainer">
@@ -17,7 +15,7 @@ export function Hero() {
               traditional recipes served with a modern twist.
             </p>
             <PrimaryButton
-              onClick={() => navigate("/book")}
+              onClick={() => (window.location = "/book")}
               type="button"
               value="Reserve a Table"
             />
