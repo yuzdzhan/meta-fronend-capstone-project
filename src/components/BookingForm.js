@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import "./BookingPage.css";
 import { PrimaryButton } from "./PrimaryButton";
 import { useAvailableTimes } from "../state/ContextAvailableTimesProvider";
-import { fetchAPI } from "../api/api";
+import { fetchAPI, submitAPI } from "../api/api";
 import { formatAPIDates } from "../utils/helpers";
-import { useReservatinons } from "../state/ContextReservationsProvider";
+import { useNavigate } from "react-router-dom";
 
 export function BookingForm() {
   const [availableTimes, dispatch] = useAvailableTimes();
-  const [, dispatchReservation] = useReservatinons();
+  const navigate = useNavigate();
 
   const availableOccasions = [
     { value: "birthday", label: "Birthday" },
@@ -70,17 +70,17 @@ export function BookingForm() {
       return;
     }
 
-    dispatchReservation({
-      type: "CREATE_RESERVATION",
-      payload: { ...state, id: Math.random() },
-    });
+    const isSuccess = submitAPI(state);
 
-    setState({
-      date: "",
-      time: "",
-      guests: 0,
-      occasion: "",
-    });
+    if (isSuccess) {
+      setState({
+        date: "",
+        time: "",
+        guests: 0,
+        occasion: "",
+      });
+      navigate("/confirmed");
+    }
   };
 
   useEffect(() => {

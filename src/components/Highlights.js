@@ -4,15 +4,17 @@ import lemonDesert from "../images/lemon dessert.png";
 import bikeIcon from "../images/ic_sharp-pedal-bike.svg";
 import "./Highlights.css";
 import { PrimaryButton } from "./PrimaryButton";
+import { useNavigate } from "react-router-dom";
 
 export function Highlights() {
+  const navigate = useNavigate();
   return (
     <section id="weekSpecial">
       <div className="weekSpecialContainer">
         <div className="head">
           <h2>This weeks specials!</h2>
           <PrimaryButton
-            onClick={() => (window.location = "/book")}
+            onClick={() => navigate("/book")}
             type="button"
             value="Reserve a Table"
           />

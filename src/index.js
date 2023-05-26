@@ -6,7 +6,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 import { BookingPage, HomePage } from "./components";
 import { ContextAvailableTimesProvider } from "./state/ContextAvailableTimesProvider";
-import { ContextReservationsProvider } from "./state/ContextReservationsProvider";
+import { ConfirmedBookingPage } from "./components/ConfirmedBookingPage";
 
 const router = createBrowserRouter([
   {
@@ -17,16 +17,18 @@ const router = createBrowserRouter([
     path: "/book",
     element: <BookingPage />,
   },
+  {
+    path: "/confirmed",
+    element: <ConfirmedBookingPage />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ContextReservationsProvider>
       <ContextAvailableTimesProvider>
         <RouterProvider router={router} />
       </ContextAvailableTimesProvider>
-    </ContextReservationsProvider>
   </React.StrictMode>
 );
 
