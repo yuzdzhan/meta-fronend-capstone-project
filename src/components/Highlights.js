@@ -11,7 +11,11 @@ export function Highlights() {
       <div className="weekSpecialContainer">
         <div className="head">
           <h2>This weeks specials!</h2>
-          <PrimaryButton type='button' value='Reserve a Table'/>
+          <PrimaryButton
+            onClick={() => (window.location = "/book")}
+            type="button"
+            value="Reserve a Table"
+          />
         </div>
         <div className="content">
           <div className="row">
